@@ -7,7 +7,10 @@
   <Design.DataContext>
     <vm:MainWindowViewModel/>
   </Design.DataContext>
-  
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>    
-  
+
+  <Grid RowDefinitions="*,*">
+    <TextBlock Grid.Row="0" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Button Grid.Row="1" Command="{Binding ChangeGreeting}">Click here!</Button>
+  </Grid>
+
 </Window>
